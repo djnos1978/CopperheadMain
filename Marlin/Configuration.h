@@ -589,6 +589,12 @@ const bool Z_MAX_ENDSTOP_INVERTING = false; // set to true to invert the logic o
   #define NEWPANEL
   #define ULTIPANEL
 
+  //
+  // uncomment to disable support for Panelolu2 SD card
+  //
+  #define OTHER_SD_CARD
+
+
   #ifndef ENCODER_PULSES_PER_STEP
 	#define ENCODER_PULSES_PER_STEP 4
   #endif
