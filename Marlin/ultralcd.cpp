@@ -32,7 +32,9 @@ typedef void (*menuFunc_t)();
 uint8_t lcd_status_message_level;
 char lcd_status_message[LCD_WIDTH+1] = WELCOME_MSG;
 
-#ifdef DOGLCD
+#ifdef LCD_I2C_PANELOLU2
+  #include "ultralcd_implementation_panelolu2.h"
+#elif defined(DOGLCD)
 #include "dogm_lcd_implementation.h"
 #else
 #include "ultralcd_implementation_hitachi_HD44780.h"
